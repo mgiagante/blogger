@@ -12,5 +12,7 @@
 <h3>Comments</h3>
 <%= render partial: 'articles/comment', collection: @article.comments %><!-- This could be replaced by 'render @article.comments' if the partial were placed in app/views/comments/_comment.html.erb -->
 
+<%= render partial: 'comments/form' %>
+
 <%= link_to '<< Back to Articles List', articles_path %>
 
