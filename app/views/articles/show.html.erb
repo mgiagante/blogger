@@ -10,7 +10,7 @@
 <p><%= link_to "Edit", edit_article_path(@article) %></p>
 
 <h3>Comments</h3>
-<%= render partial: 'articles/comment', collection: @article.comments %>
+<%= render partial: 'articles/comment', collection: @article.comments %><!-- This could be replaced by 'render @article.comments' if the partial were placed in app/views/comments/_comment.html.erb -->
 
 <%= link_to '<< Back to Articles List', articles_path %>
 
