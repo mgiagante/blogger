@@ -5,6 +5,9 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    # The code below creates a new comment assigned to this article in case the user fills the comment creation form while this article is being shown.
+    @comment = Comment.new
+    @comment.article_id = @article.id
   end
 
   def new
