@@ -3,6 +3,9 @@ class Article < ApplicationRecord
   has_many :taggings
   has_many :tags, through: :taggings # Allows to access directly from articles to tags
 
+  has_attached_file :image
+  validates_attachment_content_type :image, content_type: ['image/jpg', 'image/jpeg', 'image/png']
+
   # An alternative would be to redefine Tag#to_s to show the tag's name.
   # That way the method below would need to only call tags.join(", ")
   def tag_list
