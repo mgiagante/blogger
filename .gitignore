@@ -23,3 +23,7 @@
 # Ignore vim swp and swo files
 *.swp
 *.swo
+
+# Ignore /public/system content
+/public/system/*
+
